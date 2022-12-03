@@ -1,5 +1,4 @@
-## Task 1
-
+## Task 1 &  Task 2
 def task2(calorieList):
     sortedCalorieList = sorted(calorieList, reverse=True)
     print(sortedCalorieList)
@@ -27,16 +26,13 @@ def task1():
                 # Add new elf line, but skip the calculation for this cycle
                 continue
             # Continue with calorie calculation
-            #print(calorieList)
             calorieList[elf] += int(line)
-        #print(calorieList)
         max_value = max(calorieList)
         max_location = [index for index, item in enumerate(calorieList) if item == max_value]
-        #print(max_value)
-        #print(max_location)
-        #print(max_location[0]+1)
         ## Solution to 1
         print("The largest calorie count is: " + str(max_value)+ " and held by elf nr " + str(max_location[0]+1))
+        ## Do additional logic for Solution 2
         task2(calorieList)
+
 if __name__ == '__main__':
-    task1()
+    task1() # Chained together
